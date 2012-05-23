@@ -14,6 +14,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'find_a_port'
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'capybara'
