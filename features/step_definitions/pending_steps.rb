@@ -22,10 +22,6 @@ Then /^I see that the todo list is currently empty$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-Given /^I have a todo list named "(.*?)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
 When /^I provide the name "(.*?)" for the todo list$/ do |arg1|
   pending # express the regexp above with the code you wish you had
 end

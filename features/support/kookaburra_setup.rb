@@ -8,10 +8,12 @@ APP_PORT = FindAPort.available_port
 
 # Start up the Rack server for testing in a forked process
 rack_server_pid = fork do
-  ENV['RAILS_ENV'] = 'test'
+  #ENV['RAILS_ENV'] = 'test'
   require 'capybara'
   require 'thwait'
   require File.join(File.dirname(__FILE__), '../../config/environment')
+  api_user = User.new('kookaburra', 'cucumbersFTW!')
+  RegisteredUsers.instance << api_user
   Capybara.server_port = APP_PORT
   Capybara::Server.new(TodoCaseApp::Application).boot
   ThreadsWait.all_waits(Thread.list)
