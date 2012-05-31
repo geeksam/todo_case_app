@@ -1,7 +1,6 @@
 require 'exceptions/not_authorized'
 require 'exceptions/data_validation_failed'
 require 'exceptions/repository_insertion_failed'
-require 'repositories/users'
 require 'models/user'
 
 module UseCases
